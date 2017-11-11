@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimary"
+            android:layout_height="wrap_content">
+            <android.support.constraint.ConstraintLayout
+                android:padding="24dp"
+                android:elevation="8dp"
+                android:translationZ="8dp"
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:targetApi="lollipop">
+
+                <TextView
+                    android:id="@+id/timeFrom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="21sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="15:48" />
+
+                <TextView
+                    android:id="@+id/timeTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="21sp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="10:46" />
+
+                <TextView
+                    android:id="@+id/dateTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginTop="0dp"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/timeTo"
+                    tools:text="01.10.2017" />
+
+                <TextView
+                    android:id="@+id/dateFrom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@+id/timeFrom"
+                    tools:text="30.09.2017"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginTop="0dp" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/lineImageView"
+                    android:layout_width="0dp"
+                    android:layout_height="17dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="48dp"
+                    app:layout_constraintLeft_toRightOf="@+id/dateFrom"
+                    app:layout_constraintRight_toLeftOf="@+id/dateTo"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_city_line"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:id="@+id/tripTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintHorizontal_bias="0.477"
+                    app:layout_constraintLeft_toLeftOf="@+id/lineImageView"
+                    app:layout_constraintRight_toRightOf="@+id/lineImageView"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="18h 58m" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lineImageView"
+                    android:id="@+id/ll2">
+                    <TextView
+                        android:layout_weight="1"
+                        android:id="@+id/cityFrom"
+                        android:textColor="@android:color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginStart="8dp"
+                        android:textAlignment="viewStart"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:text="Dnipro"/>
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:id="@+id/cityTo"
+                        android:textColor="@android:color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="2dp"
+                        android:textAlignment="textEnd"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:text="Odessa"/>
+                </LinearLayout>
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/trainImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:tint="@android:color/white"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="16dp"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintBottom_toBottomOf="@+id/lineImageView"
+                    app:layout_constraintLeft_toLeftOf="@+id/lineImageView"
+                    app:layout_constraintTop_toBottomOf="@+id/tripTime"
+                    app:srcCompat="@drawable/ic_train"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/linearLayout"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/ll2"
+                    android:layout_marginLeft="8dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginRight="8dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="8dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:id="@+id/platzkart"
+                            android:layout_width="wrap_content"
+                            android:layout_height="44dp"
+                            android:background="@drawable/shape_left"
+                            android:backgroundTint="@android:color/white"
+                            tools:targetApi="lollipop">
+                            <me.grantland.widget.AutofitTextView
+                                android:id="@+id/platzkartTV"
+                                tools:text="₴429.00"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="18sp"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:layout_width="88dp"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"/>
+                        </RelativeLayout>
+                        <TextView
+                            android:layout_marginTop="4dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/platzkart"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="#9BA3AE"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:id="@+id/coupe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="44dp"
+                            android:background="@color/colorAccent"
+                            android:backgroundTint="@color/colorAccent"
+                            tools:targetApi="lollipop">
+                            <me.grantland.widget.AutofitTextView
+                                android:id="@+id/coupeTV"
+                                tools:text="₴732.00"
+                                android:textColor="@android:color/white"
+                                android:textSize="18sp"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:layout_width="88dp"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"/>
+                        </RelativeLayout>
+                        <TextView
+                            android:layout_marginTop="4dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/coupe"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="#9BA3AE"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:id="@+id/sv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="44dp"
+                            android:background="@drawable/shape_right"
+                            android:backgroundTint="@android:color/white"
+                            tools:targetApi="lollipop">
+                            <me.grantland.widget.AutofitTextView
+                                android:id="@+id/svTV"
+                                tools:text="₴1534.00"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="18sp"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:layout_width="88dp"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"/>
+                        </RelativeLayout>
+                        <TextView
+                            android:layout_marginTop="4dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sv"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="#9BA3AE"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/ic_back"
+                android:layout_width="wrap_content"
+                android:adjustViewBounds="true"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_back_arrow_circle"/>
+        </RelativeLayout>
+
+        <android.support.v4.view.ViewPager
+            android:layout_marginTop="8dp"
+            android:id="@+id/mViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"/>
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

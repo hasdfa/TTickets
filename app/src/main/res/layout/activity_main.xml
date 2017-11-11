@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:elevation="8dp"
+            android:translationZ="8dp"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="390dp"
+            android:background="@color/colorPrimary"
+            tools:targetApi="lollipop">
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:id="@+id/linearLayoutCompat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@null"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <TextView
+                    android:id="@+id/planBuy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:paddingBottom="6dp"
+                    android:paddingEnd="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/plan_amp_buy"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/liveTimes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:paddingBottom="6dp"
+                    android:paddingEnd="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/live_times"
+                    android:textColor="@color/colorPrimaryLight"
+                    android:textSize="21sp" />
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <View
+                android:id="@+id/underline"
+                android:layout_width="100dp"
+                android:layout_height="3dp"
+                android:background="@color/colorAccent"
+                app:layout_constraintBottom_toBottomOf="@+id/linearLayoutCompat"
+                app:layout_constraintLeft_toLeftOf="@+id/linearLayoutCompat" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="28dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:paddingEnd="8dp"
+                        android:paddingStart="8dp"
+                        app:srcCompat="@drawable/ic_place"
+                        android:tint="@color/colorPrimary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingEnd="4dp"
+                        android:paddingStart="4dp"
+                        android:text="@string/from"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <android.support.v7.widget.AppCompatAutoCompleteTextView
+                        android:id="@+id/textViewFrom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNone"
+                        android:labelFor="@+id/autoCompleteTextView"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:paddingBottom="16dp"
+                        android:paddingTop="16dp"
+                        android:textAllCaps="false"
+                        android:textColor="#999"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:text="Dnipro" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="28dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:paddingEnd="8dp"
+                        android:paddingStart="8dp"
+                        app:srcCompat="@drawable/ic_place"
+                        android:tint="@color/colorAccent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingEnd="4dp"
+                        android:paddingStart="4dp"
+                        android:text="@string/to"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <android.support.v7.widget.AppCompatAutoCompleteTextView
+                        android:id="@+id/textViewTo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNone"
+                        android:labelFor="@+id/autoCompleteTextView"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:paddingBottom="16dp"
+                        android:paddingTop="16dp"
+                        android:textAllCaps="false"
+                        android:textColor="#999"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:text="Dnipro" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView2"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:id="@+id/linearLayout">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:id="@+id/leftBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_left"
+                        android:backgroundTint="@android:color/white"
+                        tools:targetApi="lollipop">
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/simpleArrow"
+                            android:padding="14dp"
+                            app:srcCompat="@drawable/ic_arrow"
+                            android:layout_width="64dp"
+                            android:layout_height="48dp"
+                            android:adjustViewBounds="true"/>
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_marginTop="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/single"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textColor="#9BA3AE"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:id="@+id/rightBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_right"
+                        android:backgroundTint="@color/colorAccent"
+                        tools:targetApi="lollipop">
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/doubleArrow"
+                            android:padding="12dp"
+                            android:tint="@android:color/white"
+                            app:srcCompat="@drawable/ic_double_arrow"
+                            android:layout_width="64dp"
+                            android:layout_height="48dp"
+                            android:adjustViewBounds="true"/>
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_marginTop="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/return_race"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textColor="#9BA3AE"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:paddingBottom="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/date"
+                tools:text="Date"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#9BA3AE"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                android:layout_marginStart="8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:id="@+id/textView2" />
+
+            <TextView
+                android:id="@+id/date1"
+                android:paddingBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="27.09.2017"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:layout_marginEnd="12dp"
+                app:layout_constraintRight_toLeftOf="@+id/calendar1"
+                app:layout_constraintTop_toTopOf="@+id/calendar1"
+                android:layout_marginTop="0dp" />
+
+            <TextView
+                android:paddingBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/date_2"
+                tools:text="Date 2"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#9BA3AE"
+                android:layout_marginStart="8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <TextView
+                android:id="@+id/date2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="28.09.2017"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:layout_marginEnd="12dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toBottomOf="@+id/date1"
+                app:layout_constraintRight_toLeftOf="@+id/calendar2" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/calendar2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_calendar"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toBottomOf="@+id/date1" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/calendar1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:srcCompat="@drawable/ic_calendar"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                app:layout_constraintRight_toRightOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+        
+        <android.support.v7.widget.RecyclerView
+            android:layout_marginTop="8dp"
+            android:id="@+id/mRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

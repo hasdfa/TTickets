@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">TrainTickets</string>
+    <string name="live_times">Live Times</string>
+    <string name="plan_amp_buy"><![CDATA[Plan & Buy]]></string>
+    <string name="from">From:</string>
+    <string name="to">To:</string>
+    <string name="single">Single</string>
+    <string name="return_race">Return</string>
+    <string name="date">Date</string>
+    <string name="date_2">Date 2</string>
+    <string name="done">Done</string>
+
+    <string name="title_tab_start_date">Start Date</string>
+    <string name="title_tab_end_date">End Date</string>
+    <string name="platzkart">Платцкарт</string>
+    <string name="coupe">Купе</string>
+    <string name="sv">СВ</string>
+
+    <integer name="translate_duration">250</integer>
+</resources>
