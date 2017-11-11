@@ -97,8 +97,8 @@ class MainActivity : ActivityBase() {
         )
 
         planBuy.setOnClickListener {
-            if (selectedTab == SelectedTab.PlanBuy || isAnimatingIn1) return@setOnClickListener
-            isAnimatingIn1 = true
+            if (selectedTab == SelectedTab.PlanBuy || isAnimating) return@setOnClickListener
+            isAnimating = true
 
             val ulp = underline.layoutParams as ConstraintLayout.LayoutParams
 
@@ -126,8 +126,8 @@ class MainActivity : ActivityBase() {
             selectedTab = SelectedTab.PlanBuy
         }
         liveTimes.setOnClickListener {
-            if (selectedTab == SelectedTab.LiveTimes || isAnimatingIn1) return@setOnClickListener
-            isAnimatingIn1 = true
+            if (selectedTab == SelectedTab.LiveTimes || isAnimating) return@setOnClickListener
+            isAnimating = true
 
             val ulp = underline.layoutParams as ConstraintLayout.LayoutParams
 

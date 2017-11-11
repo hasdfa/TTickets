@@ -50,7 +50,7 @@ class EventsAdapter(private val data: List<Event>): RecyclerView.Adapter<EventsA
 
                 it.ourTrip.text = getOurTripTime(time)
 
-                it.showMore.text = "от ₴${train.minPrice} >"
+                it.showMore.text = "from ₴${train.minPrice} >"
 
                 it.showMore.setOnClickListener {
                     val context = it.context
@@ -94,25 +94,30 @@ class EventsAdapter(private val data: List<Event>): RecyclerView.Adapter<EventsA
             val ourTripDate = Calendar.getInstance()
             ourTripDate.time = Date(time)
 
+            val hrStr = "h"
+            val mStr = "min"
+            val dayStr = "days"
+            val yearsStr = "years"
+
             var ourTripStr = ""
             if (ourTripDate.get(Calendar.YEAR)-1970 > 0) {
-                ourTripStr += "${ourTripDate.get(Calendar.YEAR)-1970} лет "
+                ourTripStr += "${ourTripDate.get(Calendar.YEAR)-1970} $yearsStr "
             }
             if (ourTripDate.get(Calendar.MONTH) > 0) {
-                ourTripStr += "${ourTripDate.get(Calendar.MONTH)} м. "
+                ourTripStr += "${ourTripDate.get(Calendar.MONTH)} $mStr "
             }
             if (ourTripDate.get(Calendar.DAY_OF_MONTH) > 1) {
-                ourTripStr += "${ourTripDate.get(Calendar.DAY_OF_MONTH) - 1} дн "
+                ourTripStr += "${ourTripDate.get(Calendar.DAY_OF_MONTH) - 1} $dayStr "
             }
             if (ourTripDate.get(Calendar.HOUR_OF_DAY) > 0) {
                 val m = ourTripDate.get(Calendar.HOUR_OF_DAY)
-                if (m in 1..9) ourTripStr += "0$m ч."
-                else if (m > 0) ourTripStr += "$m ч."
+                if (m in 1..9) ourTripStr += "0$m $hrStr "
+                else if (m > 0) ourTripStr += "$m $hrStr "
             }
             if (ourTripDate.get(Calendar.MINUTE) > 0) {
                 val m = ourTripDate.get(Calendar.MINUTE)
-                if (m in 1..9) ourTripStr += "0$m мн."
-                else if (m > 0) ourTripStr += "$m мн."
+                if (m in 1..9) ourTripStr += "0$m $mStr "
+                else if (m > 0) ourTripStr += "$m $mStr "
             }
 
             return ourTripStr
